@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="345.0" prefWidth="376.0" spacing="20.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logic.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <TextField fx:id="txt_input" layoutX="14.0" layoutY="117.0" onAction="#getInput" />
+      <Label fx:id="lbl_edit" layoutX="14.0" layoutY="97.0" text="input predicates" />
+    <Button fx:id="btn_ok" layoutX="132.0" layoutY="117.0" mnemonicParsing="false" text="OK" />
+      <ListView fx:id="list_E" editable="true" layoutX="222.0" layoutY="15.0" prefHeight="164.0" prefWidth="186.0" />
+    </AnchorPane>
+   <ButtonBar prefHeight="40.0" prefWidth="200.0">
+     <buttons>
+           <Button fx:id="btn_close" mnemonicParsing="false" onAction="#close" text="close" />
+     </buttons>
+   </ButtonBar>
+</VBox>
