@@ -27,7 +27,7 @@ public class HelloController {
     }
     @FXML
     protected String getInput(){
-       return txt_input.getCharacters();
+       return txt_input.getText();
     }
     public void test(){
         for(char c : getInput().toCharArray()){
