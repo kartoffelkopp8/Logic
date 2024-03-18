@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Predicate {
-    private final String name;
+    private final char name;
     private int varConsAmmount;
     private boolean not;
     private List<Variable> variables;
     private List<Constant> constants;
 
-    public Predicate(String name, int amount, boolean not) {
+    public Predicate(char name, int amount, boolean not) {
         this.name = name;
         this.not = not;
         this.varConsAmmount = amount;

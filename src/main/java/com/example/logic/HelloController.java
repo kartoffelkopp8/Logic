@@ -1,5 +1,6 @@
 package com.example.logic;
 
+import Logic.Predicate;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,14 +30,25 @@ public class HelloController {
     protected String getInput(){
        return txt_input.getText();
     }
+    @FXML
     public void test(){
-        for(char c : getInput().toCharArray()){
+        char name = ' ';
+        int amount = 0;
+        boolean not = false;
+        String input = getInput();
+        for(char c : input.toCharArray()){
             if (Character.isUpperCase(c)){
-                
+                name = c;
             } else if (Character.isLowerCase(c)) {
-                
+                amount++;
             }
         }
+        if (input.charAt(0) == '~'){
+            not = true;
+        }
+        Predicate pred = new Predicate(name, amount, not);
+        // Verwenden Sie 'pred' hier oder geben Sie es zurück, je nachdem, was Sie tun möchten
     }
+
 
 }
