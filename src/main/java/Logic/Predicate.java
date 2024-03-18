@@ -18,6 +18,14 @@ public class Predicate {
         this.constants = new ArrayList<>();
     }
 
+    public Predicate(char name, int amount, boolean not, ArrayList<Constant> constants, ArrayList<Variable> variables) {
+        this.name = name;
+        this.not = not;
+        this.varConsAmmount = amount;
+        this.variables = variables;
+        this.constants = constants;
+    }
+
     public void addVariable(Variable var) {
             if (variables.size() + constants.size() < varConsAmmount) {
                 variables.add(var);
