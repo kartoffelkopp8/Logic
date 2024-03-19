@@ -34,6 +34,8 @@ public class HelloController {
     protected String getInput(){
        return txt_input.getText();
     }
+
+    /*ToDo: Hashset eincoden, mit name als identifier, + als trennsymbol, einzelne coden */
     @FXML
     public void test(){
         ArrayList<Constant> constants = new ArrayList<>();
