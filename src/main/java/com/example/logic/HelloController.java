@@ -35,7 +35,7 @@ public class HelloController {
        return txt_input.getText();
     }
 
-    /*ToDo: Hashset eincoden, mit name als identifier, + als trennsymbol, einzelne coden */
+    /*ToDo: + als trennsymbol, einzelne coden */
 
     @FXML
     public void getTerm(){
@@ -62,7 +62,7 @@ public class HelloController {
     if (input.charAt(0) == '~'){
         not = true;
     }
-    //Predicate pred = new Predicate(name, amount, not, constants, variables);
+    Predicate pred = new Predicate(name, amount, not, constants, variables);
 }
 
 
