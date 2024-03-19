@@ -38,7 +38,7 @@ public class HelloController {
     /*ToDo: Hashset eincoden, mit name als identifier, + als trennsymbol, einzelne coden */
 
     @FXML
-    public void test(){
+    public void getTerm(){
     HashMap<Character, Constant> constants = new HashMap<>();
     HashMap<Character, Variable> variables = new HashMap<>();
     char name = ' ';
