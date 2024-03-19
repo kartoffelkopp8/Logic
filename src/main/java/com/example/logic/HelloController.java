@@ -36,7 +36,7 @@ public class HelloController {
        return txt_input.getText();
     }
 
-    //ToDo: + als trennsymbol, einzelne coden
+    //ToDo: umschreiben der Methode, sodass ganzer term implementiert wird
 
     @FXML
     public void getTerm(){
