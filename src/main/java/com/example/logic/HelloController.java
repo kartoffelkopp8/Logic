@@ -2,6 +2,7 @@ package com.example.logic;
 
 import Logic.Constant;
 import Logic.Predicate;
+import Logic.Term;
 import Logic.Variable;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -39,6 +40,7 @@ public class HelloController {
 
     @FXML
     public void getTerm(){
+        Term term = new Term();
     HashMap<Character, Constant> constants = new HashMap<>();
     HashMap<Character, Variable> variables = new HashMap<>();
     char name = ' ';
@@ -63,6 +65,7 @@ public class HelloController {
         not = true;
     }
     Predicate pred = new Predicate(name, amount, not, constants, variables);
+        term.addPredicates(name, pred);
 }
 
 

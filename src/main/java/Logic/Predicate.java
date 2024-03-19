@@ -48,4 +48,8 @@ public class Predicate {
         }
 
     }
+
+    public char getName() {
+        return name;
+    }
 }
