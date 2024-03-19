@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/*
+Class to describe a Predicate in First Order Logic
+ */
 public class Predicate {
     private final char name;
     private int varConsAmmount;
@@ -29,7 +31,6 @@ public class Predicate {
         this.variables = variables;
         this.constants = constants;
     }
-
     public void addVariable(char name, Variable var) {
             if (variables.size() + constants.size() < varConsAmmount) {
                 variables.put(name, var);

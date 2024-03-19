@@ -36,33 +36,35 @@ public class HelloController {
     }
 
     /*ToDo: Hashset eincoden, mit name als identifier, + als trennsymbol, einzelne coden */
+
     @FXML
     public void test(){
-        ArrayList<Constant> constants = new ArrayList<>();
-        ArrayList<Variable> variables = new ArrayList<>();
-        char name = ' ';
-        int amount = 0;
-        boolean not = false;
-        String input = getInput();
-        for(char c : input.toCharArray()){
-            if (Character.isUpperCase(c)){
-                name = c;
-            } else if (Character.isLowerCase(c)) {
-                Set <Character> variableChars = new HashSet<>(Arrays.asList('v', 'w', 'x','y', 'z'));
-                Set <Character> constantChars = new HashSet<>(Arrays.asList('v', 'w', 'x','y', 'z'));
-                amount++;
-                if (variableChars.contains(c)){
-                    variables.add(new Variable(c));
-                } else if (constantChars.contains(c)){
-                    constants.add(new Constant(c));
-                }
+    HashMap<Character, Constant> constants = new HashMap<>();
+    HashMap<Character, Variable> variables = new HashMap<>();
+    char name = ' ';
+    int amount = 0;
+    boolean not = false;
+    String input = getInput();
+    for(char c : input.toCharArray()){
+        if (Character.isUpperCase(c)){
+            name = c;
+        } else if (Character.isLowerCase(c)) {
+            Set <Character> variableChars = new HashSet<>(Arrays.asList('v', 'w', 'x','y', 'z'));
+            Set <Character> constantChars = new HashSet<>(Arrays.asList('v', 'w', 'x','y', 'z'));
+            amount++;
+            if (variableChars.contains(c)){
+                variables.put(c, new Variable(c));
+            } else if (constantChars.contains(c)){
+                constants.put(c, new Constant(c));
             }
         }
-        if (input.charAt(0) == '~'){
-            not = true;
-        }
-        Predicate pred = new Predicate(name, amount, not, constants, variables);
     }
+    if (input.charAt(0) == '~'){
+        not = true;
+    }
+    //Predicate pred = new Predicate(name, amount, not, constants, variables);
+}
+
 
 
 }
