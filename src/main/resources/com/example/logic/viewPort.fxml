@@ -14,9 +14,9 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <AnchorPane prefHeight="200.0" prefWidth="200.0">
-      <TextField fx:id="txt_input" layoutX="14.0" layoutY="117.0" onAction="#getInput" />
-      <Label fx:id="lbl_edit" layoutX="14.0" layoutY="97.0" text="input predicates" />
-    <Button fx:id="btn_ok" layoutX="132.0" layoutY="117.0" mnemonicParsing="false" onAction="#getTerm" text="OK" />
+      <TextField fx:id="txt_input" layoutX="7.0" layoutY="24.0" onAction="#getInput" />
+      <Label fx:id="lbl_edit" layoutX="7.0" layoutY="6.0" text="input predicates" />
+    <Button fx:id="btn_ok" layoutX="132.0" layoutY="24.0" mnemonicParsing="false" onAction="#getTerm" text="OK" />
       <ListView fx:id="list_E" editable="true" layoutX="222.0" layoutY="15.0" prefHeight="164.0" prefWidth="186.0" />
     </AnchorPane>
    <ButtonBar prefHeight="40.0" prefWidth="200.0">
